@@ -1,0 +1,35 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'wpm/styles.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Before the Form was implemented
+    <h1>{{ question.question_text }}</h1> 
+    <ul>
+    {% for choice in question.choice_set.all %} 
+        <li>{{ choice.choice_text }}</li> 
+    {% endfor %}
+    </ul>  
+-->
+
+    <form action="{% url 'wpm:add_url' %}" method="post">
+        {% csrf_token %}
+        <fieldset>            <!--choice just variable, question from foreign key relation which gives choice_set-->
+                <input type="text" name="url_added" id="url_added" value="{{ url_text }}""> <!--id is just a unique identifier, name would be the same for 2 radio btns in plain html to allow selection of only one here the for loop does it for us-->
+                <label for="url_added"> URL:</label><br> <!--for is a label thing to match the id-->
+        </fieldset>
+        <input type="submit" value="Add url">
+    </form>
+
+
+    <p> It takes {{ processed }} minutes to read this text </p>
+</body>
+</html>
