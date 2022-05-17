@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="de_de">
+ <head>
+  <link href="themes/SuiteP/images/sugar_icon.ico?v=idmcmQJJ_-m_p-YKWIi5Ng" rel="SHORTCUT ICON"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" name="viewport">
+   <!-- Bootstrap -->
+   <link href="themes/SuiteP/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="themes/SuiteP/css/fonts.css" rel="stylesheet" type="text/css"/>
+    <link href="themes/SuiteP/css/grid.css" rel="stylesheet" type="text/css">
+     <link href="themes/SuiteP/css/footable.core.css" rel="stylesheet" type="text/css"/>
+     <title>
+      SuiteCRM
+     </title>
+     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+     <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+     <script>
+      jscal_today = 1000*1651757117; if(typeof app_strings == "undefined") app_strings = new Array();
+     </script>
+     <script type="text/javascript">
+      var module_sugar_grp1 = 'Users';
+     </script>
+     <script type="text/javascript">
+      var action_sugar_grp1 = 'Login';
+     </script>
+     <script src="cache/include/javascript/sugar_grp1_jquery.js?v=idmcmQJJ_-m_p-YKWIi5Ng" type="text/javascript" z="">
+     </script>
+     <script src="cache/include/javascript/sugar_grp1_yui.js?v=idmcmQJJ_-m_p-YKWIi5Ng" type="text/javascript">
+     </script>
+     <script src="cache/include/javascript/sugar_grp1.js?v=idmcmQJJ_-m_p-YKWIi5Ng" type="text/javascript">
+     </script>
+     <script src="include/javascript/calendar.js?v=idmcmQJJ_-m_p-YKWIi5Ng" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      if ( typeof(SUGAR) == 'undefined' ) {SUGAR = {}};
+    if ( typeof(SUGAR.themes) == 'undefined' ) SUGAR.themes = {};
+     </script>
+     <script src="cache/themes/SuiteP/js/style.js?v=idmcmQJJ_-m_p-YKWIi5Ng" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      <!--
+        SUGAR.themes.theme_name = 'SuiteP';
+        SUGAR.themes.theme_ie6compat = 'false';
+        SUGAR.themes.hide_image = 'themes/default/images/hide.gif?v=idmcmQJJ_-m_p-YKWIi5Ng';
+        SUGAR.themes.show_image = 'themes/default/images/show.gif?v=idmcmQJJ_-m_p-YKWIi5Ng';
+        SUGAR.themes.loading_image = 'themes/default/images/img_loading.gif?v=idmcmQJJ_-m_p-YKWIi5Ng';
+        
+        if (YAHOO.env.ua)
+            UA = YAHOO.env.ua;
+        -->
+     </script>
+     <!-- qtip & suggestion box -->
+     <link href="include/javascript/qtip/jquery.qtip.min.css" rel="stylesheet" type="text/css"/>
+     <link href="" rel="stylesheet" type="text/css"/>
+     <link href="include/javascript/jquery/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css"/>
+     <link href="cache/themes/SuiteP/css/Dawn/style.css?v=idmcmQJJ_-m_p-YKWIi5Ng" rel="stylesheet" type="text/css"/>
+     <link href="themes/SuiteP/css/colourSelector.php" rel="stylesheet" type="text/css"/>
+     <script src="themes/SuiteP/js/jscolor.js?v=idmcmQJJ_-m_p-YKWIi5Ng" type="text/javascript">
+     </script>
+     <script src="cache/include/javascript/sugar_field_grp.js?v=idmcmQJJ_-m_p-YKWIi5Ng" type="text/javascript">
+     </script>
+    </link>
+   </link>
+  </meta>
+ </head>
+ <body onmouseout="closeMenus();">
+  <iframe id="ajaxUI-history-iframe" src="index.php?entryPoint=getImage&amp;imageName=blank.png" style="display:none" title="empty">
+  </iframe>
+  <input id="ajaxUI-history-field" type="hidden"/>
+  <script type="text/javascript">
+   if (SUGAR.ajaxUI && !SUGAR.ajaxUI.hist_loaded) {
+        YAHOO.util.History.register('ajaxUILoc', "", SUGAR.ajaxUI.go);
+                YAHOO.util.History.initialize("ajaxUI-history-field", "ajaxUI-history-iframe");
+        
+    }
+  </script>
+  <!-- Start of page content -->
+  <link href="modules/Users/login.css?v=idmcmQJJ_-m_p-YKWIi5Ng" media="all" rel="stylesheet" type="text/css"/>
+  <script src="modules/Users/login.js?v=idmcmQJJ_-m_p-YKWIi5Ng" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   var LBL_LOGIN_SUBMIT = 'Ausführen';
+    var LBL_REQUEST_SUBMIT = 'Ihre Anfrage wurde verschickt.';
+    var LBL_SHOWOPTIONS = 'Anzeigeoptionen';
+    var LBL_HIDEOPTIONS = 'Optionen verbergen';
+  </script>
+  <!-- Start login container -->
+  <div class="p_login">
+   <div class="p_login_top">
+    <a href="http://www.suitecrm.com" title="SuiteCRM">
+     SuiteCRM
+    </a>
+   </div>
+   <div class="p_login_middle">
+    <p align="center" class="error">
+     Sie wurden abgemeldet, da Ihre Sitzung abgelaufen ist.
+    </p>
+    <div id="loginform">
+     <p>
+      User name: Demo
+     </p>
+     <p>
+      Password: Demo
+     </p>
+     <form action="index.php" autocomplete="off" class="form-signin" id="form" method="post" name="DetailView" onsubmit="return document.getElementById('cant_login').value == ''" role="form">
+      <div class="companylogo">
+       <img alt="SuiteCRM" src="themes/default/images/company_logo.png?v=idmcmQJJ_-m_p-YKWIi5Ng" style="margin: 5px 0;"/>
+      </div>
+      <span class="error" id="browser_warning" style="display:none">
+       <b>
+        Achtung:
+       </b>
+       Ihre Browser Version wird nicht mehr unterstützt oder Sie verwenden einen nicht unterstützten Browser..
+       <p>
+       </p>
+       Wir empfehlen folgende Versionen:
+       <p>
+       </p>
+       <ul>
+        <li>
+         Internet Explorer 10 (Kompatibilitätsmodus nicht unterstützt)
+         <li>
+          Firefox 24
+          <li>
+           Safari 5.1
+           <li>
+            Chrome 29
+           </li>
+          </li>
+         </li>
+        </li>
+       </ul>
+      </span>
+      <span class="error" id="ie_compatibility_mode_warning" style="display:none">
+       <b>
+        Achtung:
+       </b>
+       Ihr Browser ist in der IE Kompatibilitätssicht, welche nicht unterstützt wird.
+      </span>
+      <span class="error" id="post_error">
+      </span>
+      <input name="module" type="hidden" value="Users"/>
+      <input name="action" type="hidden" value="Authenticate"/>
+      <input name="return_module" type="hidden" value="Users"/>
+      <input name="return_action" type="hidden" value="Login"/>
+      <input id="cant_login" name="cant_login" type="hidden" value=""/>
+      <input name="login_module" type="hidden" value="Contacts"/>
+      <input name="login_action" type="hidden" value="index"/>
+      <input name="login_record" type="hidden" value=""/>
+      <input name="login_token" type="hidden" value=""/>
+      <input name="login_oauth_token" type="hidden" value=""/>
+      <input name="login_mobile" type="hidden" value=""/>
+      <div class="login-language-chooser">
+       Sprache:
+       <select name="login_language" onchange="switchLanguage(this.value)">
+        <option value="en_us">
+         English (US)
+        </option>
+        <option selected="" value="de_de">
+         Deutsch
+        </option>
+       </select>
+      </div>
+      <br/>
+      <div class="input-group">
+       <input autocomplete="off" autofocus="" class="form-control" id="user_name" name="user_name" placeholder="Benutzername" required="" tabindex="1" type="text" value=""/>
+      </div>
+      <br/>
+      <div class="input-group">
+       <input autocomplete="off" class="form-control" id="username_password" name="username_password" placeholder="Kennwort" tabindex="2" type="password" value=""/>
+      </div>
+      <br/>
+      <input class="btn btn-lg btn-primary btn-block" id="bigbutton" name="Login" tabindex="3" title="Anmelden" type="submit" value="Anmelden"/>
+      <div id="forgotpasslink" onclick='toggleDisplay("forgot_password_dialog");' style="cursor: pointer; display:none;">
+       <a href="javascript:void(0)">
+        Passwort vergessen?
+       </a>
+      </div>
+     </form>
+     <form action="index.php" autocomplete="off" class="form-signin passform" id="fp_form" method="post" name="fp_form" role="form">
+      <div id="forgot_password_dialog" style="display:none">
+       <input name="entryPoint" type="hidden" value="GeneratePassword"/>
+       <div class="error" id="generate_success" style="display:inline;">
+       </div>
+       <br/>
+       <div class="input-group">
+        <input autocomplete="off" class="form-control" id="fp_user_name" name="fp_user_name" placeholder="Benutzername" size="26" type="text" value=""/>
+       </div>
+       <br/>
+       <div class="input-group">
+        <input autocomplete="off" class="form-control" id="fp_user_mail" name="fp_user_mail" placeholder="E-Mail Adresse" size="26" type="text" value=""/>
+       </div>
+       <br/>
+       <script>
+        /**
+   * Login Screen Validation
+   */
+  function validateAndSubmit() {
+      generatepwd();
+    }
+
+  /**
+   * Password reset screen validation
+   */
+  function validateCaptchaAndSubmit() {
+      document.getElementById('username_password').value = document.getElementById('new_password').value;
+      document.getElementById('ChangePasswordForm').submit();
+    }
+       </script>
+       <div id="wait_pwd_generation">
+       </div>
+       <input autocomplete="off" class="button btn-block" id="generate_pwd_button" name="fp_login" onclick="validateAndSubmit(); return document.getElementById('cant_login').value == ''" style="display:inline" title="Email Temp Password" type="button" value="Ausführen"/>
+      </div>
+     </form>
+    </div>
+   </div>
+   <div class="p_login_bottom">
+    <a id="admin_options">
+     © Supercharged by SuiteCRM
+    </a>
+    <a id="powered_by">
+     © Powered By SugarCRM
+    </a>
+   </div>
+  </div>
+  <!-- End login container -->
+  <link href="custom/include/dtbc/css/dtbcDisplayContactPanel.css?v=1_0_0" rel="stylesheet" type="text/css"/>
+  <script>
+   YAHOO.util.Event.onContentReady('content', function() {
+                if ($('#dtbc-contact-panel').length === 0) {
+                        var html = '<div id="dtbc-contact-panel" class="open">' +
+                                '<div class="dtbc-contact-panel-inner">' +
+                                '<div class="dtbc-contact-panel-toggle"><div class="open-toggle">&gt;</div><div class="closed-toggle">&lt;</div></div>' +
+                                '<div class="dtbc-contact-panel-segment dtbc-contact-panel-segment-logo">' +
+                                '<div class="logo"></div>' +
+                                '</div>' +
+                                '<div class="dtbc-contact-panel-segment dtbc-contact-panel-segment-text">' +
+                                '<p>' + SUGAR.language.get('app_strings', 'LBL_DTBC_DISPLAY_CONTACT_PANEL_TEXT') + '</p>' +
+                                '</div>' +
+                                '<div class="dtbc-contact-panel-segment dtbc-contact-panel-segment-button">' +
+                                '<a href="' + SUGAR.language.get('app_strings', 'LBL_DTBC_DISPLAY_CONTACT_PANEL_URL') + '">' + SUGAR.language.get('app_strings', 'LBL_DTBC_DISPLAY_CONTACT_PANEL_BUTTON') + '</a>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>';
+                        $('body').append(html);
+
+                        $('.dtbc-contact-panel-toggle').on('click', function(event) {
+                                $('#dtbc-contact-panel').toggleClass('open closed');
+                                $.ajax({
+                                        url: 'index.php?module=Home&action=dtbcDisplayContactPanelChangeState',
+                                        data: {'popupState': $('#dtbc-contact-panel').attr('class')},
+                                        type: 'POST'
+                                });
+                        });
+                }
+        });
+  </script>
+  <!-- END of container-fluid, pageContainer divs -->
+  <!-- Start Footer Section -->
+  <!-- END Footer Section -->
+  <script>
+   //qe_init function sets listeners to click event on elements of 'quickEdit' class
+        if (typeof(DCMenu) != 'undefined') {
+            DCMenu.qe_refresh = false;
+            DCMenu.qe_handle;
+        }
+        function qe_init() {
+
+            //do not process if YUI is undefined
+            if (typeof(YUI) == 'undefined' || typeof(DCMenu) == 'undefined') {
+                return;
+            }
+
+
+            //remove all existing listeners.  This will prevent adding multiple listeners per element and firing multiple events per click
+            if (typeof(DCMenu.qe_handle) != 'undefined') {
+                DCMenu.qe_handle.detach();
+            }
+
+            //set listeners on click event, and define function to call
+            YUI().use('node', function (Y) {
+                var qe = Y.all('.quickEdit');
+                var refreshDashletID;
+                var refreshListID;
+
+                //store event listener handle for future use, and define function to call on click event
+                DCMenu.qe_handle = qe.on('click', function (e) {
+                    //function will flash message, and retrieve data from element to pass on to DC.miniEditView function
+                    ajaxStatus.flashStatus(SUGAR.language.get('app_strings', 'LBL_LOADING'), 800);
+                    e.preventDefault();
+                    if (typeof(e.currentTarget.getAttribute('data-dashlet-id')) != 'undefined') {
+                        refreshDashletID = e.currentTarget.getAttribute('data-dashlet-id');
+                    }
+                    if (typeof(e.currentTarget.getAttribute('data-list')) != 'undefined') {
+                        refreshListID = e.currentTarget.getAttribute('data-list');
+                    }
+                    DCMenu.miniEditView(e.currentTarget.getAttribute('data-module'), e.currentTarget.getAttribute('data-record'), refreshListID, refreshDashletID);
+                });
+
+            });
+        }
+
+        qe_init();
+
+        SUGAR_callsInProgress++;
+        SUGAR._ajax_hist_loaded = true;
+        if (SUGAR.ajaxUI)
+            YAHOO.util.Event.onContentReady('ajaxUI-history-field', SUGAR.ajaxUI.firstLoad);
+
+
+
+
+        $(function(){
+
+            // fix for campaign wizard
+            if($('#wizard').length) {
+
+                // footer fix
+                var bodyHeight = $('body').height();
+                var contentHeight = $('#pagecontent').height() + $('#wizard').height();
+                var fieldsetHeight = $('#pagecontent').height() + $('#wizard fieldset').height();
+                var height = bodyHeight < contentHeight ? contentHeight : bodyHeight;
+                if(fieldsetHeight > height) {
+                    height = fieldsetHeight;
+                }
+                height += 50;
+                $('#content').css({
+                    'min-height': height + 'px'
+                });
+            }
+        });
+  </script>
+  <div class="modal fade modal-generic" role="dialog" tabindex="-1">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+      <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+       <span aria-hidden="true">
+        ×
+       </span>
+      </button>
+      <h4 class="modal-title" id="title-generic">
+       Passwort zurücksetzen
+      </h4>
+     </div>
+     <div class="modal-body">
+      <div class="container-fluid">
+      </div>
+     </div>
+     <div class="modal-footer">
+      <button class="btn btn-default" data-dismiss="modal" type="button">
+       Abbrechen
+      </button>
+      <button class="btn btn-danger" id="btn-generic" type="button">
+       Ok
+      </button>
+     </div>
+    </div>
+    <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+  </div>
+ </body>
+</html>

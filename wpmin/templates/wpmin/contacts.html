@@ -1,0 +1,58 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'wpmin/css/styles.css' %}">
+
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css"
+  rel="stylesheet"
+/>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  <div class="d-flex align-items-center justify-content-center">
+    <div class="card mt-4" style="width: 20rem;">
+
+        <form action="{% url 'wpmin:get_contacts' %}" method="post">
+            {% csrf_token %}
+            
+              <div class="form-outline mb-4">
+                      <input type="url" name="url_added" id="url_added" class="form-control" value="{{ url_text }}" required/>
+                      <label class="form-label" for="url_added">Url Field</label>
+              </div>
+            
+            <button type="submit" class="btn btn-primary btn-block mb-6 ml-6">Calculate Time</button>
+        </form>
+
+        <p class="text-center"> It takes {{ get_contacts | default:0 }} minutes to read this text </p>
+
+    </div>
+  </div>
+
+
+
+    <!-- MDB -->
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"
+    ></script>
+</body>
+</html>
